@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #000000b6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  visibility: hidden;
+}
+
+header > nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 60px;
+  background-color: rgb(77, 79, 80);
+  justify-content: space-between;
+  border-bottom: 2px solid #fff;
+}
+
+header > nav > .logo {
+  font-size: 26px;
+  color: #fbb216;
+  font-weight: 600;
+}
+
+header > nav > .links {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+header > nav > .links > a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+}
+
+header > nav > .links > a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #fbb216;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease-in-out;
+}
+
+header > nav > .links > a:hover::after {
+  width: 100%;
+}
+
+header > nav > .links > a:hover {
+  color: #fbb216;
+  transition: 0.3s;
+}
+
+header > nav > .right > select {
+  outline: none;
+  border: none;
+  background-color: #fbb216;
+  color: #000;
+  width: 100px;
+  padding: 8px 10px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+main > .search {
+  width: 100%;
+  height: 55vh;
+  background: linear-gradient(#000000ae, #000000ae),
+    url(images/banner-bg.jpg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+main > .search > .inputs {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  width: 450px;
+  height: 47px;
+  justify-content: space-between;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  z-index: 11;
+}
+
+main > .search > .inputs > input {
+  padding-left: 20px;
+  font-size: 24px;
+  outline: none;
+  border: none;
+  background: none;
+  width: 87%;
+  height: 100%;
+}
+
+main > .search > .inputs > button {
+  height: 100%;
+  background-color: #fbb216;
+  color: #fff;
+  width: 55px;
+  outline: none;
+  border: none;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+main > .search > p {
+  font-size: 14px;
+}
+
+/* FOOD CART */
+
+.food-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  gap: 40px;
+  padding: 0 20px;
+  padding-bottom: 40px;
+}
+
+.food-cart > .cart {
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 3px solid #ccc;
+  box-shadow: 0 0 10px #fbb216;
+}
+
+.food-cart > .cart > .top {
+  width: 100%;
+}
+
+.food-cart > .cart > .top > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.food-cart > .cart > .bottom {
+  padding: 17px 12px;
+  padding-bottom: 24px;
+}
+
+.food-cart > .cart > .bottom > p {
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 12px;
+  color: #555555;
+}
+
+.food-cart > .cart > .bottom > button {
+  padding: 8px 20px;
+  background-color: #fbb216;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.food-cart > .cart > .bottom > button:active {
+  transform: scale(0.97);
+}
+
+@media screen and (max-width: 700px) {
+  header > nav {
+    padding: 10px 20px;
+  }
+
+  header > nav > .links {
+    gap: 27px;
+  }
+
+  header > nav > .links > a {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  main > .search > .inputs {
+    width: 300px;
+  }
+
+  main > .search > .inputs > input {
+    font-size: 20px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header > nav > .right > select {
+    display: none;
+  }
+
+  main > .search > .inputs {
+    width: 100%;
+  }
+
+  main > .search > .inputs > input {
+    font-size: 19px;
+  }
+
+  .food-cart > .cart {
+    width: 100%;
+  }
+}

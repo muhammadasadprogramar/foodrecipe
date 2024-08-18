@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="overlay"></div>
+    
+    <header>
+      <nav>
+        <div class="logo">FOOD</div>
+        <div class="links">
+          <a href="#">Home</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="search">
+        <h1>Your Desired Dish?</h1>
+        <div class="inputs">
+          <input type="text" id="input" placeholder="Search Dishes" />
+          <button id="btn"><i class="ri-search-line"></i></button>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+      </section>
+      <!-- FOOD CART SECTION -->
+      <section class="food-cart" id="parent">
+        <div class="cart" id="del1">
+          <div class="top"><img src="images/service-box-2.webp" alt=""></div>
+          <div class="bottom">
+            <h3>Burger</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellat tempore minima.</p>
+            <button>Booking</button>
+          </div>
+        </div>
+        <div class="cart" id="del2">
+          <div class="top"><img src="images/service-box-4.webp" alt=""></div>
+          <div class="bottom">
+            <h3>Fingers</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellat tempore minima.</p>
+            <button>Booking</button>
+          </div>
+        </div>
+        <div class="cart" id="del3">
+          <div class="top"><img src="images/service-box-16.webp" alt=""></div>
+          <div class="bottom">
+            <h3>Tika Kabab</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repellat tempore minima.</p>
+            <button>Booking</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
